@@ -14,8 +14,8 @@ import threading
 import time
 
 
-PATH_EXTRACTOR = '/home/lopseg/tools/content/rue/jsextractor.rb'
-PATH_TMP_FILE = " /home/lopseg/tools/.burpjscrapper.tmp"
+PATH_EXTRACTOR = 'PATH TO EXTRACTOR.RB'
+PATH_TMP_FILE = "WRITABLE PATH FOR A TMP FILE"
 
 print "REMEMBER TO EDIT THE FILE TO ADD THE CORRECT PATH TO EXTRACTOR AND AN WRITABLE PATH TO THE TMP FILE"
 
