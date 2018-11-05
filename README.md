@@ -12,7 +12,7 @@ To use this extension you need to do three things:
 
 Just import this extension in Extender Tab of Burp Suite.
 Then when you see an Js file in any response of any server inside Burp suite, 
-Just click on it with the right button, then choose "Send to Js scapper".
+Just click on it with the right button, then choose "Send to Js scrapper".
 Go to extender tab and see the results.
 
 # Notes
