@@ -1,5 +1,6 @@
 # JsScrapper
-JsScraper is an Burp Suite extension that act as a midle betwen and js file and extractor.rb tool.
+
+JsScraper is an Burp Suite extension that act as a midle betwen an js file and extractor.rb tool.
 
 # Requirements 
 
