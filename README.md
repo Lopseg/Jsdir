@@ -15,6 +15,8 @@ Then when you see an Js file in any response of any server inside Burp suite,
 Just click on it with the right button, then choose "Send to Js scrapper".
 Go to extender tab and see the results.
 
+![My image](https://raw.githubusercontent.com/Lopseg/JsScrapper/master/output_jsscrapper.png)
+
 # Notes
 
 Feel free to help me improve this tool. Thank you Jobert.
