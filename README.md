@@ -9,7 +9,7 @@ Then when you see an Js file in any response of any server inside Burp suite,
 Just click on it with the right button, then choose "Send to Js scrapper".
 Go to extender tab and see the results.
 
-![My image]( Jspathextractor/jsscrapper.png )
+![My image]( https://raw.githubusercontent.com/Lopseg/Jspathextractor/master/jsscrapper.png )
 
 # Notes
 
