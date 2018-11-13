@@ -14,10 +14,10 @@ import threading
 import time
 
 
-PATH_EXTRACTOR = 'PATH TO EXTRACTOR.RB'
-PATH_TMP_FILE = "WRITABLE PATH FOR A TMP FILE"
+PATH_EXTRACTOR = 'dependencies/jsextractor.rb'
+PATH_TMP_FILE = "db/tmp.js"
 
-print "REMEMBER TO EDIT THE FILE TO ADD THE CORRECT PATH TO EXTRACTOR AND AN WRITABLE PATH TO THE TMP FILE"
+print "Js Path Extractor"
 
 class BurpExtender(IBurpExtender, IContextMenuFactory):
   def registerExtenderCallbacks(self, callbacks):
