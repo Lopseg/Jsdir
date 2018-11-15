@@ -1,7 +1,14 @@
 # Jspathextractor
 
-Jspathextractor is an Burp Suite extension that act as a midle betwen an js file and extractor.rb tool.
-By using this extension you can extract urls or directorys from js files inside burp suite !
+Jspathextractor is an Burp Suite extension that extract hidden url paths from js files 
+          && Beautify the file and save for futher/better reading !
+
+# Requirements
+
+Just need to instal js-beautify
+Copy and paste in your terminal:
+
+sudo apt install js-beautifier
 
 # Usage
 
