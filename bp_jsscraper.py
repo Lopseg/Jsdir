@@ -1,7 +1,9 @@
-#DEVELOPED BY RAFAEL 'LOPSEG' RODRIGUES DA SILVA 11/05/2018
+#DEVELOPED BY RAFAEL 'LOPSEG' RODRIGUES 05/11/2018
 #SPECIAL THANKS TO jobertabma for EXTRACTOR.rb
 #YOU CAN FIND THE TOOL IN
 #https://github.com/jobertabma/relative-url-extractor
+
+
 from burp import IBurpExtender
 from burp import IContextMenuFactory
 
@@ -11,15 +13,17 @@ from java.net import URL
 
 import subprocess
 import threading
-import time
-
+import os
+import sys
 
 PATH_EXTRACTOR = 'dependencies/jsextractor.rb'
 PATH_TMP_FILE = "db/tmp.js"
 
 print "Js Path Extractor"
 
+
 class BurpExtender(IBurpExtender, IContextMenuFactory):
+
   def registerExtenderCallbacks(self, callbacks):
     self._callbacks = callbacks
     self._helpers   = callbacks.getHelpers()
@@ -42,10 +46,10 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
 
     # grab the details of what the user clicked
     http_traffic = self.context.getSelectedMessages()
-
     for traffic in http_traffic:
       http_service = traffic.getHttpService()
       host         = http_service.getHost()
+
       print 'Scanning :' + host
       response_plain_text = open(PATH_TMP_FILE,'w')
       responseInfo=traffic.getResponse()
@@ -58,10 +62,23 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
 
       response_plain_text.close()
 
-      command = "ruby "+PATH_EXTRACTOR+" "+PATH_TMP_FILE
-      cmd = subprocess.Popen(command,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
-      output = cmd.stdout.read()
-      print "Urls or possible urls paths found:\n"
-      print output
+      cmd = subprocess.Popen("ruby "+PATH_EXTRACTOR+" "+PATH_TMP_FILE,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
+      print "\nUrls or possible urls paths found:\n"
+      print cmd.stdout.read()
+      self.jsbeautify(host)
 
-    return
+
+  def jsbeautify(self,host):
+      try:
+          filename = str(os.times()[4])+"-"+host+".js"
+          cmd = subprocess.Popen("js-beautify "+PATH_TMP_FILE,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
+          self.save_to_file(filename,cmd.stdout.read())
+          print "A version of this js file has been beautified and saved at\n "+os.getcwd()+"db/files-beatified/"+filename
+      except:
+          print 'In order to this feature work properly install jsbeatifier on your system with the following commands:\n'
+          print 'sudo apt install jsbeautifier'
+      return
+  def save_to_file(self,filename,data):
+      with open("db/beautified-files/"+filename,'w') as f:
+          f.write(data)
+      return
