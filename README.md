@@ -1,6 +1,6 @@
 # Jspathextractor
 
-Jspathextractor is an Burp Suite extension that extract hidden url paths, beautify and save js files for futher/better reading.
+Jspathextractor is an Burp Suite extension that extract hidden url paths from js files, beautify it and save for futher/better reading.
 
 The extracted paths are printed on Burp Suite.
 
