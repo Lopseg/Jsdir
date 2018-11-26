@@ -8,6 +8,8 @@ The beatified file is saved under db/beautified-files folder.
 
 # Requirements
 
+####  You can use with Burp Free version
+
 Need to have js-beautifier in your pc.
 
 Copy and paste in your terminal:
