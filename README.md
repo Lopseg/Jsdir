@@ -1,6 +1,6 @@
-# Jspathextractor
+# Jsdir
 
-Jspathextractor is an Burp Suite extension that extract hidden url paths from js files, beautify it and save for futher/better reading.
+Jsdir is an Burp Suite extension that extract hidden url paths from js files, beautify it and save for futher/better reading.
 
 The extracted paths are printed on Burp Suite.
 
@@ -26,7 +26,7 @@ Just click on it with the right button, then choose "Send to Js scrapper".
 
 Go to extender tab and see the results.
 
-![My image]( https://raw.githubusercontent.com/Lopseg/Jspathextractor/master/jsscrapper.png )
+![My image]( https://raw.githubusercontent.com/Lopseg/Jsdir/master/jsscrapper.png )
 
 # Notes
 
