@@ -30,7 +30,9 @@ Go to extender tab and see the results.
 
 # Notes
 
-Feel free to help me improve this tool. Thank you Jobert.
+I'm currently working in a improvement for this tool. 
+
+Please feel free to help me improve this tool. Thank you Jobert.
 
 
 *Lopseg*
