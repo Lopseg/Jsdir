@@ -10,11 +10,13 @@ The beatified file is saved under db/beautified-files folder.
 
 ####  You can use with Burp Free version
 
-Need to have js-beautifier in your pc.
+### Need to have js-beautifier in your pc.
 
 Copy and paste in your terminal:
 
+```
 sudo apt install js-beautifier
+```
 
 # Usage
 
@@ -33,6 +35,5 @@ Go to extender tab and see the results.
 I'm currently working in a improvement for this tool. 
 
 Please feel free to help me improve this tool. Thank you Jobert.
-
 
 *Lopseg*
