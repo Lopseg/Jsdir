@@ -28,7 +28,7 @@ Just click on it with the right button, then choose "Send to Js scrapper".
 
 Go to extender tab and see the results.
 
-![My image]( https://raw.githubusercontent.com/Lopseg/Jsdir/master/jsscrapper.png )
+![My image]( jsscrapper.png )
 
 # Notes
 
