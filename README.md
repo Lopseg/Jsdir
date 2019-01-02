@@ -22,13 +22,13 @@ sudo apt install js-beautifier
 
 Import this extension in Extender Tab of Burp Suite.
 
-Then when you see an Js file in any response of any server inside Burp suite,
+Then when you see an Js file in any response of any server inside Burp Suite,
 
-Just click on it with the right button, then choose "Send to Js scrapper".
+Just click on it with the right button and choose "Send to Js scrapper" option.
 
-Go to extender tab and see the results.
+Go to extender tab and see the results. Example output:
 
- Example output: ![My image]( jsdir.png )
+  ![My image]( jsdir.png )
 
 # Notes
 
