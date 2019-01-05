@@ -12,9 +12,11 @@ from java.util import List, ArrayList
 from java.net import URL
 
 import subprocess
-import threading
+from threading import Thread
 import os
 import sys
+
+import jsbeautifier
 
 PATH_EXTRACTOR = 'dependencies/jsextractor.rb'
 PATH_TMP_FILE = "db/tmp.js"
@@ -70,9 +72,8 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
 
   def jsbeautify(self,host):
       try:
-          filename = str(os.times()[4])+"-"+host+".js"
-          cmd = subprocess.Popen("js-beautify "+PATH_TMP_FILE,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
-          self.save_to_file(filename,cmd.stdout.read())
+          res = jsbeautifier.beautify_file(PATH_TMP_FILE)
+          self.save_to_file(filename,res)
           print "A version of this js file has been beautified and saved at\n "+os.getcwd()+"db/files-beatified/"+filename
       except:
           print 'In order to this feature work properly install jsbeatifier on your system with the following commands:\n'
