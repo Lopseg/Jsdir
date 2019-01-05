@@ -72,9 +72,9 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
           
           cmd = subprocess.Popen("python db/parser.py "+PATH_TMP_FILE.split('/')[1]+" "+host,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
 
-          print "A version of this js file has been beautified and saved at\n "+os.getcwd()+"/db/"+cmd.stdout.read()
+          print "A version of this js file has been beautified and saved at\n "+os.getcwd()+"/db/"+cmd.stdout.read().split('\n')[1]
       except:
-          print 'In order to this feature work properly install jsbeatifier on your system with the following commands:\n'
-          print 'sudo apt install jsbeautifier'
+          print 'In order to this feature work properly install jsbeatifier on your system with the instructions given at:\n'
+          print 'https://github.com/Lopseg/Jspathextractor'
       return
 
