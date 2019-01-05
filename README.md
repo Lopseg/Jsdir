@@ -42,6 +42,9 @@ Assuming that you already installed python
     cd C:\Python27\Scripts\
     pip install jsbeautifier
     ```
+2. Copy all files and folders of this repo and paste inside C:\Python27\Scripts folder
+
+
 #### If it's a windows OS need to configure both ruby and python global variables
 
 - Your path variable is probably already set if you used rubyinstaller
@@ -53,6 +56,9 @@ Assuming that you already installed python
 # Usage
 
 Import this extension in Extender Tab of Burp Suite.
+
+- If you are a linux user, please use bs_jsscrapper_linux file
+- If you are a windows user, please use bs_jsscrapper file
 
 Then when you see an Js file in any response of any server inside Burp Suite,
 
