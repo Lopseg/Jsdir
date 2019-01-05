@@ -6,17 +6,49 @@ The extracted paths are printed on Burp Suite.
 
 The beatified file is saved under db/beautified-files folder.
 
-# Requirements
-
 ####  You can use with Burp Free version
 
-### Need to have js-beautifier in your pc.
+# Requirements
 
-Copy and paste in your terminal:
+- python 2.7.9 version
+- js-beautifier python library
+- BurpSuite Proxy
+- Any ruby version installed
 
-```
-sudo apt install js-beautifier
-```
+#### If it's a windows OS need to configure both ruby and python global variables
+
+- To install python 2.7.9 check:
+[https://www.python.org/downloads/release/python-279/](https://www.python.org/downloads/release/python-279/)
+- To install ruby check:
+[https://www.ruby-lang.org/pt/downloads/](https://www.ruby-lang.org/pt/downloads/)
+
+## Linux Instalation:
+
+Assuming that you already have python & pip installed
+
+1. To install jsbeautifier:
+  - Copy and paste in your terminal:
+    ```
+    pip install jsbeautifier
+    ```
+2.Ready to go !
+
+## Windows Instalation
+
+Assuming that you already installed python
+
+1. Install jsbeautifier by copying and pasting this in your terminal:
+    ```
+    cd C:\Python27\Scripts\
+    pip install jsbeautifier
+    ```
+#### If it's a windows OS need to configure both ruby and python global variables
+
+- Your path variable is probably already set if you used rubyinstaller
+
+-- If not, please check this [discussion at stackoverflow.](https://stackoverflow.com/questions/26947427/how-do-i-add-ruby-to-the-path-variable-on-windows)
+
+- For python check this [discussion](https://superuser.com/questions/143119/how-do-i-add-python-to-the-windows-path)
 
 # Usage
 
