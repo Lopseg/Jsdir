@@ -29,7 +29,7 @@ Assuming that you already have python & pip installed
 1. To install jsbeautifier:
   - Copy and paste in your terminal:
     ```
-    pip install jsbeautifier
+    sudo apt-get install jsbeautifier && pip install jsbeautifier
     ```
 2.Ready to go !
 
