@@ -72,17 +72,18 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
       try:
           filename = str(os.times()[4])+"-"+host+".js"
           cmd = subprocess.Popen("js-beautify "+PATH_TMP_FILE,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
-          try:
-              self.save_to_file(filename,cmd.stdout.read())
-              print "A version of this js file has been beautified and saved at\n "+os.getcwd()+"db/files-beatified/"+filename
-          except:
-              print "Error in writing to file at "+os.getcwd()+"db/files-beatified/"+filename
-              print "Please check the write permissions of the folder/user"
       except:
           print 'In order to jsbeautifier feature work properly, install jsbeatifier on your system with the following commands:\n'
           print 'sudo apt-get install jsbeautifier && pip install jsbeautifier'
           print "Please check if you can run it on the terminal first"
+      try:
+              self.save_to_file(filename,cmd.stdout.read())
+              print "A version of this js file has been beautified and saved at\n "+os.getcwd()+"db/files-beatified/"+filename
+      except:
+              print "Error in writing to file at "+os.getcwd()+"db/files-beatified/"+filename
+              print "Please check the write permissions of the folder/user"
       return
+    
   def save_to_file(self,filename,data):
       with open("db/beautified-files/"+filename,'w') as f:
           f.write(data)
