@@ -70,9 +70,10 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
 
   def jsbeautify(self,host):
       try:
-          filename = str(os.times()[4])+"-"+host+".js"
-          cmd = subprocess.Popen("js-beautify "+PATH_TMP_FILE,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
-      except:
+      filename = str(os.times()[4])+"-"+host+".js"
+      cmd = subprocess.Popen("js-beautify "+PATH_TMP_FILE,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
+      error_output = cmd.stderr.read()
+      if "js-beautify: command not found" in error_output or "js-beautify: not found" in error_output:
           print 'In order to jsbeautifier feature work properly, install jsbeatifier on your system with the following commands:\n'
           print 'sudo apt-get install jsbeautifier && pip install jsbeautifier'
           print "Please check if you can run it on the terminal first"
