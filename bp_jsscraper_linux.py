@@ -76,6 +76,7 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
           print 'In order to jsbeautifier feature work properly, install jsbeatifier on your system with the following commands:\n'
           print 'sudo apt-get install jsbeautifier && pip install jsbeautifier'
           print "Please check if you can run it on the terminal first"
+          sys.exit(0)
       try:
               self.save_to_file(filename,cmd.stdout.read())
               print "A version of this js file has been beautified and saved at\n "+os.getcwd()+"db/files-beatified/"+filename
