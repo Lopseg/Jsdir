@@ -69,7 +69,6 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
 
 
   def jsbeautify(self,host):
-      try:
       filename = str(os.times()[4])+"-"+host+".js"
       cmd = subprocess.Popen("js-beautify "+PATH_TMP_FILE,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
       error_output = cmd.stderr.read()
