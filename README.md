@@ -47,9 +47,7 @@ Assuming that you already installed python
 
 #### If it's a windows OS need to configure both ruby and python global variables
 
-- Your path variable is probably already set if you used rubyinstaller
-
--- If not, please check this [discussion at stackoverflow.](https://stackoverflow.com/questions/26947427/how-do-i-add-ruby-to-the-path-variable-on-windows)
+- Your path variable is probably already set if you used rubyinstaller. If not, please check this [discussion at stackoverflow.](https://stackoverflow.com/questions/26947427/how-do-i-add-ruby-to-the-path-variable-on-windows)
 
 - For python check this [discussion](https://superuser.com/questions/143119/how-do-i-add-python-to-the-windows-path)
 
@@ -69,8 +67,6 @@ Go to extender tab and see the results. Example output:
   ![My image]( jsdir.png )
 
 # Notes
-
-I'm currently working in a improvement for this tool. 
 
 Please feel free to help me improve this tool. Thank you Jobert.
 
