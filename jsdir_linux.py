@@ -1,7 +1,4 @@
-#DEVELOPED BY RAFAEL 'LOPSEG' RODRIGUES 05/11/2018
-#SPECIAL THANKS TO jobertabma for EXTRACTOR.rb
-#YOU CAN FIND THE TOOL IN
-#https://github.com/jobertabma/relative-url-extractor
+#lopseg
 
 
 from burp import IBurpExtender
