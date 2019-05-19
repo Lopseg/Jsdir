@@ -1,8 +1,4 @@
-#DEVELOPED BY RAFAEL 'LOPSEG' RODRIGUES 05/11/2018
-#SPECIAL THANKS TO jobertabma for EXTRACTOR.rb
-#YOU CAN FIND THE TOOL IN
-#https://github.com/jobertabma/relative-url-extractor
-
+#Lopseg
 
 from burp import IBurpExtender
 from burp import IContextMenuFactory
@@ -62,9 +58,21 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
 
       response_plain_text.close()
 
-      cmd = subprocess.Popen("ruby "+PATH_EXTRACTOR+" "+PATH_TMP_FILE,shell=True,stdin=subprocess.PIPE,stderr=subprocess.PIPE,stdout=subprocess.PIPE)
-      print "\nUrls or possible urls paths found:\n"
-      print cmd.stdout.read()
+      cmd = "ruby "+PATH_EXTRACTOR+" "+PATH_TMP_FILE
+      print cmd
+ 
+      ## run it ##
+      p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+ 
+      ## But do not wait till finish, start displaying output immediately ##
+      while True:
+          out = p.stdout.read(1)
+          if out == '' and p.poll() != None:
+              break
+          if out != '':
+              sys.stdout.write(out)
+              sys.stdout.flush()
+      return
       self.jsbeautify(host)
 
   def jsbeautify(self,host):
