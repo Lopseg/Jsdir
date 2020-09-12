@@ -32,7 +32,7 @@ Assuming that you already have python & pip installed
     sudo apt-get install jsbeautifier && pip install jsbeautifier
     ```
 2.Ready to go !
-
+a
 ## Windows Instalation
 
 Assuming that you already installed python
